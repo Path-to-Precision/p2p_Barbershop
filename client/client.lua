@@ -108,15 +108,18 @@ function Barber()
                     })
                     RageUI.Button(Config.Translate('purchase_validated', (type_index == 1 and "~g~"..Config.price or "~b~"..Config.price)), false, {RightBadge = RageUI.BadgeStyle.Tick, Color = {BackgroundColor = {120,255,0,100}}}, true, {
                         onSelected = function()
-                            TriggerEvent('skinchanger:getSkin', function(skin)
-                                TriggerServerEvent('esx_skin:save', skin)
-                            end)
-                            TriggerServerEvent('p2p_Barbershop:buy', type_index)
-                            RageUI.CloseAll()
-                            barber = false
-                            FreezeEntityPosition(PlayerPedId(), false)
-                            RenderScriptCams(0, true, 2000)
-                            DestroyAllCams(true)
+                            ESX.TriggerServerCallback('p2p_Barbershop:buy', function(success)
+                                if success then
+                                    TriggerEvent('skinchanger:getSkin', function(skin)
+                                        TriggerServerEvent('esx_skin:save', skin)
+                                    end)
+                                    RageUI.CloseAll()
+                                    barber = false
+                                    FreezeEntityPosition(PlayerPedId(), false)
+                                    RenderScriptCams(0, true, 2000)
+                                    DestroyAllCams(true)
+                                end
+                            end, type_index)
                         end
                     })
                     RageUI.ColourPanel(Config.Translate('hair_color_1'), RageUI.PanelColour.HairCut, Config.index.couleurcheveuxprimaire[1], cheveuxcolor_index, {
