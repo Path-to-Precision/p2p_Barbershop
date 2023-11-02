@@ -7,8 +7,8 @@ A simple barber shop in RageUI v2 working at 0.00ms with ESX framework.
 Well at this point this script has reached the pinnacle of what is available in the world of free and open-source script. Feel free to propose an addition by submitting a [pull request](https://github.com/Path-to-Precision/p2p_Barbershop/pulls) on this repository.
 
 ## Video
-* YouTube : lien (in french)
-* Streamable : lien (in english)
+* YouTube : https://www.youtube.com/watch?v=_6pWr3S8US0 (in french)
+* Streamable : https://streamable.com/ffwwgt (in english)
 
 ## Screenshot
 ![menu screenshot](https://cdn.discordapp.com/attachments/1166410187909910528/1169593335065870387/image.png?ex=6555f7ad&is=654382ad&hm=ff6816d6f6c960a26577526793cbbaeb7297144d11a8eb0921a7482e7e6bc7d8&)
