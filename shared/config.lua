@@ -2,7 +2,7 @@ Config = {
     getSharedObject = "last", -- last : es_extended version >= 1.9.0 / old : es_extended version < 1.9.0
     Locale = GetConvar('esx:locale', 'fr'),
     Translate = TranslateCap, -- TranslateCap : es_extended version >= 1.9.0 / _U : es_extended version < 1.9.0
-    MenuX = 1450,
+    MenuX = 0,
     price = 100,
     key = { -- https://docs.fivem.net/docs/game-references/controls/
         tournerdroite = 47, -- turn left
